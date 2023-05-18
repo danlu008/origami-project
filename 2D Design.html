@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Origami Design</title>
+    <link href='image/favicon.ico' rel='icon'/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="https://kit.fontawesome.com/4880f89820.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Nav Content -->
+    <div class="navbar">
+        <a class="active">Architectural Origami Design</a>
+        <div class="dropdown">
+            <button class="dropbtn">File
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a onclick="link();">export SVG</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Design
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a onclick="createRandomPattern();">random pattern</a>
+            </div>
+        </div>
+        <a id="AboutOpenButton">About</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="flex-row">
+            <div class="grid text-center">
+                <div class="text-content">
+                    <p class="title">Design Pattern</p>
+                    <p>Input: Block Representation</p>
+                </div>
+                <div id="Input"></div>
+            </div>
+            <div class="grid text-center">
+                <div class="text-content">
+                    <p class="title">Crease Pattern</p>
+                    <p>Output: Generated Crease Pattern</p>
+                </div>
+                <div id="Output"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Content -->
+    <div class="bottom-content">
+        <div class="text-center" style="color: rgb(150, 150, 150); font-size: 0.6em; margin: 50px">
+            <p>Copyright © 2023 Meng-Huan Lu. Architectural Origami Design. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="AboutModal" class="modal">
+        <div id="AboutModalContent" class="modal-content text-center">
+            <span class="close" id="AboutModalCloseButton">&times;</span>
+            <div class="text-content">
+                <h2>About the Program</h2>
+                <hr>
+                <p>This Program illustrates one of the crease pattern design method with several basic patterns. One Layer Orthogonal Structure Design Program Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div id="Primitive_Output"></div>
+        </div>
+    </div>
+    
+    <script src="js/control/modal_about.js"></script>
+    <script src="js/MathClass.js"></script>
+    <script src="js/StringClass.js"></script>
+    <script src="js/segment.js"></script>
+    <script src="js/primitives.js"></script>
+    <script src="js/fillCreasePattern.js"></script>
+    <script src="js/fillBlock.js"></script>
+    <script src="js/randomPattern.js"></script>
+    <script src="js/createPattern.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
